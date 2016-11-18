@@ -26,7 +26,7 @@ bmp* load_bmp(const char* filename){
 
 void crop(bmp* bmp_file, int x, int y, int w, int h){
     BYTE** res = malloc(sizeof(BYTE*) * h);
-    for(int i=0; i < h; i++){
+    for(int i = 0; i < h; i++){
         res[i] = malloc(sizeof(BYTE) * w * 3);
         memcpy(res[i], bmp_file->picture[y + i] + x * 3, w * 3);
     }
