@@ -41,9 +41,9 @@ typedef struct bmp {
 } bmp;
 #pragma pack (pop)
 
-size_t padding(LONG w);
+int padding(LONG w);
 bmp* load_bmp(const char* filename);
-void crop(bmp* bmp_file, size_t x, size_t y, size_t w, size_t h);
+void crop(bmp* bmp_file, int x, int y, int w, int h);
 void rotate(bmp* bmp_file);
 void save_bmp(const char* filename, struct bmp* bmp_out);
 
