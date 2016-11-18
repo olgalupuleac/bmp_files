@@ -1,7 +1,7 @@
 CFLAGS=-std=c99 -Wall -Werror
 all: main
 main: bin/main.o bin/bmp.o
-    gcc bin/main.o bin/bmp.o -o hw1
+    gcc bin/main.o bin/bmp.o -o main
 bin/main.o: src/main.c
     mkdir -p bin
     gcc -I./include -c $(CFLAGS) src/main.c -o bin/main.o
