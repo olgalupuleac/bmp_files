@@ -6,6 +6,7 @@
 
 int main(int argc, char** argv)
 {
+    (void) argc;
     if (!strcmp(argv[1], "crop-rotate")){
          bmp* bmp_file = load_bmp(argv[2]);
          int x = atoi(argv[4]);
